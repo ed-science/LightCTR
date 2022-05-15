@@ -86,6 +86,9 @@ def generate(infile,word_id_file_path,training_file_path,vocab_size):
 
 if __name__ == '__main__':
 	if len(sys.argv) != 3:
-		print >> sys.stderr,'Usage : [%s] [input data file] [vocab size]'%(sys.argv[0])
+		(
+		    print >> sys.stderr,
+		    f'Usage : [{sys.argv[0]}] [input data file] [vocab size]',
+		)
 		sys.exit(0)
 	generate(sys.argv[1],"./vocab.txt","./train_topic.csv",sys.argv[2])
